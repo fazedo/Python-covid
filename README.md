@@ -38,7 +38,7 @@
 
 ---
 
-## Aula 1 
+## Aula 1
 ### 08/04/2020
 
 ### Lista
@@ -228,4 +228,3 @@ Lista:    https://colab.research.google.com/drive/1AMRGyfdb3MJ-ShEfwoDqDSp4JIF_B
 [Pandas](https://colab.research.google.com/drive/1NZp_zzrInVBp-7hrayo42-xl2UgQ1XZl)
 
 [Lista](https://colab.research.google.com/drive/1fpd4CkaK2EC-mHfpypslykWArQzlbIQh#scrollTo=0Dj7pMfrAGgP)
-
