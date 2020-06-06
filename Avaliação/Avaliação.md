@@ -1,8 +1,7 @@
 # Avaliação - grupo de estudos
 
 ## Critérios
-As questões de múltipla escolha valem 5 pontos cada e as questões sim/não valem 2 pontos cada. O
-teste inteiro soma 110 pontos. O conceito será calculado conforme o algoritmo a seguir:
+As questões de múltipla escolha valem 5 pontos cada e as questões sim/não valem 2 pontos cada. O teste inteiro soma 110 pontos. O conceito será calculado conforme o algoritmo a seguir:
 ```python
 def conceito(nota):
 if nota<50:
