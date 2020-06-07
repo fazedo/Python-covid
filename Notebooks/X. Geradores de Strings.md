@@ -737,45 +737,621 @@ print('y = {:.5f}'.format(1/3)) # Notação científica
 ```
 > y = 0.33333
 
-```python
 
-```
->
 
-```python
+# Notação científica
 
-```
->
+Se $x = 13000 = 1.3 \times 10^4$, então:
+$$x = 13000 = 1.3 \times 10^4$$
 
-```python
-
-```
->
+* LaTex
 
 ```python
+# Especificando o tamanho
 
+x = 30.1234567890123456
+
+print('x = {:.8f}'.format(x))
+print('x = {:.8e}'.format(x))
+print('x = {:.8g}'.format(x))
 ```
->
+> x = 30.12345679  
+> x = 3.01234568e+01  
+> x = 30.123457
 
 ```python
-
+# Você pode controlar a largura
+x = 123.456
+y = 1.23456
+print('x = {:>10.5f}'.format(x))
+print('y = {:>10.5f}'.format(y))
 ```
->
+> x =  123.45600  
+> y =    1.23456
 
 ```python
-
+# Percentagem
+x = 0.123456
+print('x = {:.2%}'.format(x))
+print('x = {:.4%}'.format(x))
 ```
->
+> x = 12.35%  
+> x = 12.3456%
 
 ```python
+# Controlando parâmetros
+x = 1
+y = 2
 
+print('{1} {0}'.format(x, y))
+print('{0} {0} {1}'.format(x, y))
 ```
->
+> 2 1  
+> 1 1 2
 
 ```python
-
+# Parâmetros com nomes
+print('{x} {area:.5f}'.format(x=1, area=2))
 ```
+> 1 2.00000
+
+```python
+# Strings
+
+print('{}'.format('Computador'))
+print('{!s}'.format('Computador'))
+print('{!r}'.format('Computador'))
+```
+> Computador  
+> Computador  
+> 'Computador'
+
+```python
+# Alinhamento
+x = 'Python'
+y = 'JavaScript'
+
+print('{:>10}'.format(x))
+print('{:>10}'.format(y))
+print()
+print('{:<10}'.format(x))
+print('{:<10}'.format(y))
+print()
+print('{:^10}'.format(x))
+print('{:^10}'.format(y))
+```
+>    Python  
+> JavaScript
 >
+> Python    
+> JavaScript
+>
+>   Python  
+> JavaScript
+
+```python
+# Datas
+import datetime
+hoje = datetime.datetime.now()
+print('{:%d/%m/%y, %H:%M:%S}'.format(hoje))
+print('{:%d/%m/%Y, %H:%M:%S}'.format(hoje))
+print('{:%d - %m}'.format(hoje))
+```
+> 07/06/20, 02:46:44  
+> 07/06/2020, 02:46:44  
+> 07 - 06
+
+```python
+# Uso de {} literal
+print('{{ e {}'.format(1))
+print('{{}} e {}'.format(1))
+```
+> { e 1  
+> {} e 1
+
+```python
+# Caracteres especiais
+print('1\t2\n3') # \t = tab, \n = nova linha
+print('OBS: Escreva \\\\ para obter \\.')
+```
+> 1	    2  
+> 3  
+> OBS: Escreva \\\ para obter \\.
+
+```python
+# Srings cruas (raw strings)
+
+print(r'Nas r-strings, \n não é um código de escape.')
+```
+> Nas r-strings, \n não é um código de escape.
+
+```python
+# r-strings produzem strings normais.
+# Não são uma nova classe.
+
+x = 'a\tb'
+y = r'a\tb'
+
+print(x, type(x), len(x), sep='\t')
+print(y, type(y), len(y), sep='\t')
+```
+> a b	<class 'str'>	3  
+> a\tb	<class 'str'>	4
+
+```python
+# A função repr retorna a representação python de um objeto
+import numpy as np
+
+x = 'Livro'
+y = np.array([1, 2, 3, 'Livro'])
+
+print(x)
+print(repr(x))
+
+print(y)
+print(repr(y))
+```
+> Livro  
+> 'Livro'  
+> ['1' '2' '3' 'Livro']  
+> array(['1', '2', '3', 'Livro'], dtype='<U21')
+
+```python
+# Pode-se executar uma expressão Python
+
+x = 2
+print(eval('x*3 + 2'))
+```
+> 8
+
+```python
+# Comentado para não interromper execução das células em série
+x = input('Entre com uma expressão:')
+print(eval(x))
+```
+> Entre com uma expressão:1 + 1  
+> 2
+
+```python
+# Cuidado com função com efeitos colaterais!
+# # (= qualquer alteração fora do escopo da função/gerador/etc chamado)
+
+print(eval('print(3)'))
+```
+> 3  
+> None
+
+```python
+# Exemplo
+
+expr = input('Entre com uma expressão: ')
+print('O resultado é {}'.format(eval(expr)))
+```
+> Entre com uma expressão: 5 * 5  
+> O resultado é 25
+
+```python
+# Procurando uma substring
+x = 'Python é uma linguagem orientada a objetos.'
+
+pos = x.find('or')  # Que acontece se você procura uma subtring inexistente?
+print(pos, x[pos:])
+```
+> 23 orientada a objetos.
+
+```python
+# Procurando uma substring
+x = 'Python é uma linguagem orientada a objetos.'
+print(x.find('o'), x.rfind('o')) # r = right
+```
+> 4 40
+
+```python
+# Procurando todas as ocorrências de uma substring
+
+x = """Vozes veladas, veludosas vozes,
+Volúpias dos violões, vozes veladas,
+Vagam nos velhos vórtices velozes
+Dos ventos, vivas, vãs, vulcanizadas.""" # Cruz e Sousa
+
+ocorrencias = []
+pos = 0
+while True:
+    pos = x.find('v', pos)
+    if pos == -1:
+        break
+    ocorrencias.append(pos)
+    pos += 1
+
+print(ocorrencias)
+```
+> [6, 15, 25, 45, 54, 60, 79, 86, 95, 107, 115, 117, 122, 127]
+
+```python
+"vozes veladas".find('v', 5)
+```
+> 6
+
+```python
+# Substituindo
+x = 'Python é uma linguagem orientada a objetos.'
+
+print(x.replace('Python', 'C++'))
+print(x.replace(' ', '-'))  # Troca todas as ocorrências
+```
+> C++ é uma linguagem orientada a objetos.  
+> Python-é-uma-linguagem-orientada-a-objetos.
+
+```python
+# Dividindo
+x = 'Python é uma linguagem orientada a objetos'
+print(x.split())
+```
+> ['Python', 'é', 'uma', 'linguagem', 'orientada', 'a', 'objetos']
+
+```python
+# Separando linhas
+
+Manoel = """Todas as coisas cujos valores podem ser
+disputados no cuspe à distância
+servem para a poesia
+
+O homem que possui um pente
+e uma árvore
+serve para poesia"""
+
+print(Manoel.splitlines())
+```
+> ['Todas as coisas cujos valores podem ser', 'disputados no cuspe à distância', 'servem para a poesia', '', 'O homem que possui um pente', 'e uma árvore', 'serve para poesia']
+
+```python
+# join()
+
+x = '---a---'.join(['casa', 'amarela', 'azul'])
+print(x)
+```
+> casa---a---amarela---a---azul
+
+
+
+# f-strings
+
+* Introduzidas na versão 3.6
+* https://www.python.org/dev/peps/pep-0536/
+
+```python
+x = 20
+texto = 'Python'
+
+print( f'{x} {texto}')
+```
+> 20 Python
+
+```python
+# Podem conter expressões
+
+x = 2
+y = 3
+print(f'{x+y**2}')
+```
+> 11
+
+```python
+# Podem incluir formatação
+x = 1/3
+print(f'{x:.6e}')
+```
+> 3.333333e-01
+
+```python
+# Podem incluir código complicado
+
+s = 'inês pereira'
+
+print(f'{s.upper()} e {s.title()}')
+```
+> INÊS PEREIRA e Inês Pereira
+
+```python
+# Aninhamento de f-strings. Pode ficar confuso!
+
+x = 2.2
+
+print(f'{x:.3f}')
+print(f'{x:.3f}'.replace('.', ','))
+print(f"{   f'{x:.3f}'.replace('.', ',')   } é a representação de {x} com vírgulas." )
+```
+> 2.200
+2,200
+2,200 é a representação de 2.2 com vírgulas.
+
+```python
+# Obs f-strings produzem strings normais. Não se trata de produzir
+# uma classe diferente de strings.
+
+x = 1/3
+
+s = f'{x:.4f}'
+print(type(s), type('1/3'))
+```
+> <class 'str'> <class 'str'>
+
+
+
+# Formatação tipo C.
+* The not so good old style
+
+```python
+# The not so good old style
+
+x = "O número é %d." % 10
+print(x)
+```
+> O número é 10.
+
+```python
+# Você pode inserir comandos de formatação
+
+print("O número é %.6f." % 10)
+```
+> O número é 10.000000.
+
+```python
+# Você pode inserir múltiplas entradas
+
+print("Os números são %.6f e %g." % (10, 3.03))
+```
+> Os números são 10.000000 e 3.03.
+
+
+
+# Expressões Regulares
+* Vulgo regex
+* https://docs.python.org/pt-br/3.8/howto/regex.html
+* https://docs.python.org/3/library/re.html
+* Testes em https://pythex.org/
+
+```python
+import re
+```
+
+```python
+x = 'Python é uma linguagem orientada a objetos.'
+
+print(re.match(r'Py', x)) # r = raw
+print(re.match(r'yt', x))
+print(re.match(r'P.t..n', x)) # . = qualquer caracter exceto nova linha
+print(re.match(r'P[ayi]', x)) # . = qualquer caracter dentro dos colchetes.
+```
+> <\_sre.SRE\_Match object; span=(0, 2), match='Py'>  
+> None  
+> <\_sre.SRE\_Match object; span=(0, 6), match='Python'>  
+> <\_sre.SRE\_Match object; span=(0, 2), match='Py'>
+
+```python
+print(r'ab\nc', 'ab\nc')
+```
+> ab\nc ab  
+> c
+
+```python
+x = 'Python é uma linguagem orientada a objetos.'.split()
+print(x,'\n')
+for palavra in x:
+    print(palavra.ljust(20), re.match(r'[A-Zaol][rb]', palavra))
+```
+> ['Python', 'é', 'uma', 'linguagem', 'orientada', 'a', 'objetos.']
+>
+> Python               None  
+> é                    None  
+> uma                  None  
+> linguagem            None  
+> orientada            <\_sre.SRE\_Match object; span=(0, 2), match='or'>  
+> a                    None  
+> objetos.             <\_sre.SRE\_Match object; span=(0, 2), match='ob'>
+
+```python
+x = 'Uma string pode conter números como 10, 20 e 33.'
+
+m = re.search(r'[a-z]n', x)
+print(m)
+
+m = re.search(r'[a-z]m', x)
+print(m)
+
+m = re.search(r'[0-9]', x)
+print(m)
+```
+> <\_sre.SRE\_Match object; span=(7, 9), match='in'>  
+> <\_sre.SRE\_Match object; span=(32, 34), match='om'>  
+> <\_sre.SRE\_Match object; span=(36, 37), match='1'>
+
+```python
+x = 'Carlos, Marcelo, Maria e Carla'
+
+m = re.search(r'[A-Za-z]*', x)  # * permite repetições (zero ou mais) do caractere anterior
+print(m)
+
+m = re.search(r'M.*', x)  # .* = Qualquer coisa de qualquer tamanho
+print(m)
+
+m = re.search(r'[A-Za-z\s]*,', x)  # * = Qualquer tamanho, \s = espaço em branco
+print(m)
+
+m = re.search(r'^[A-Za-z]', x)  #  ^ = negação
+print(m)
+
+m = re.search(r'\sM', x)  
+print(m)
+
+m = re.search(r'(.)..\1', x) # (.) campo formado por um caractere qualquer.
+print(m)
+```
+> <\_sre.SRE\_Match object; span=(0, 6), match='Carlos'>  
+> <\_sre.SRE\_Match object; span=(8, 30), match='Marcelo, Maria e Carla'>  
+> <\_sre.SRE\_Match object; span=(0, 7), match='Carlos,'>  
+> <\_sre.SRE\_Match object; span=(0, 1), match='C'>  
+> <\_sre.SRE\_Match object; span=(7, 9), match=' M'>  
+> <\_sre.SRE\_Match object; span=(18, 22), match='aria'>  
+
+```python
+# Case insensitive
+
+x= 'Casa Bela'
+m = re.search(r'BELA', x, flags=re.IGNORECASE)
+print(m)
+```
+> <\_sre.SRE\_Match object; span=(5, 9), match='Bela'>
+
+```python
+# Procurando todas a ocorrências
+
+x = """Vozes veladas, veludosas vozes,
+Volúpias dos violões, vozes veladas,
+Vagam nos velhos vórtices velozes
+Dos ventos, vivas, vãs, vulcanizadas.""" # Cruz e Sousa
+
+print(re.findall(r'v.*?\s', x, flags=re.IGNORECASE))
+# *? qualquer quantidade, mas o mínimo possível
+```
+> ['Vozes ', 'veladas, ', 'veludosas ', 'vozes,\n', 'Volúpias ', 'violões, ', 'vozes ', 'veladas,\n', 'Vagam ', 'velhos ', 'vórtices ', 'velozes\n', 'ventos, ', 'vivas, ', 'vãs, ']
+
+```python
+# É possível iterar
+for i in re.finditer(r'v.*?\s', x, flags=re.IGNORECASE):
+    print(i)
+```
+> <\_sre.SRE\_Match object; span=(0, 6), match='Vozes '>  
+> <\_sre.SRE\_Match object; span=(6, 15), match='veladas, '>  
+> <\_sre.SRE\_Match object; span=(15, 25), match='veludosas '>  
+> <\_sre.SRE\_Match object; span=(25, 32), match='vozes,\n'>  
+> <\_sre.SRE\_Match object; span=(32, 41), match='Volúpias '>  
+> <\_sre.SRE\_Match object; span=(45, 54), match='violões, '>  
+> <\_sre.SRE\_Match object; span=(54, 60), match='vozes '>  
+> <\_sre.SRE\_Match object; span=(60, 69), match='veladas,\n'>  
+> <\_sre.SRE\_Match object; span=(69, 75), match='Vagam '>  
+> <\_sre.SRE\_Match object; span=(79, 86), match='velhos '>  
+> <\_sre.SRE\_Match object; span=(86, 95), match='vórtices '>  
+> <\_sre.SRE\_Match object; span=(95, 103), match='velozes\n'>  
+> <\_sre.SRE\_Match object; span=(107, 115), match='ventos, '>  
+> <\_sre.SRE\_Match object; span=(115, 122), match='vivas, '>  
+> <\_sre.SRE\_Match object; span=(122, 127), match='vãs, '>
+
+```python
+# Compilando
+
+regex_compilado = re.compile(r'v.*?\s')
+print(regex_compilado.findall(x))
+```
+> ['veladas, ', 'veludosas ', 'vozes,\n', 'violões, ', 'vozes ', 'veladas,\n', 'velhos ', 'vórtices ', 'velozes\n', 'ventos, ', 'vivas, ', 'vãs, ']
+
+
+
+# Distância de string
+
+* Existem inúmeros algoritmos para comparar strings: distância de edição, sequências contidas, fonéticos etc.
+
+* https://pypi.org/project/textdistance/
+
+```python
+!pip install textdistance
+import textdistance
+```
+
+```python
+# distância de hamming -
+
+print(textdistance.hamming('Python', 'Python'))  # Distância entre strings iguais é 0
+print(textdistance.hamming('Python', 'Pithon'))  # Um caractere diferente
+print(textdistance.hamming('Python', 'Pytho'))   # Um caractere faltante
+print(textdistance.hamming('Python', 'Ptyhon'))  # Dois caracteres diferentes
+print(textdistance.hamming('Python', 'abc'))     # Todos diferentes
+print(textdistance.hamming('Python', 'ython'))   # Todos diferentes
+```
+> 0  
+> 1  
+> 1  
+> 2  
+> 6  
+> 6
+
+```python
+# distância de Levenshtein
+# Número mínimo de edições para transformar uma string na outra.
+# Inclui inserções, eliminações e substituições de caracteres
+
+print(textdistance.levenshtein('Python', 'Python'))  # Distância entre strings igais é 0
+print(textdistance.levenshtein('Python', 'Pithon'))  # Um caractere diferente
+print(textdistance.levenshtein('Python', 'Pytho'))   # Um caractere faltante
+print(textdistance.levenshtein('Python', 'Ptyhon'))  # Dois caracteres diferentes
+print(textdistance.levenshtein('Python', 'abc'))     # Todos diferentes
+print(textdistance.levenshtein('Python', 'ython'))   # Todos diferentes, mas basta inserir 1
+```
+> 0  
+> 1  
+> 1  
+> 2  
+> 6  
+> 1
+
+```python
+# distância de Damerau-Levenshtein
+# Número mínimo de edições para transformar uma string na outra.
+# Inclui inserções, eliminações, transposições e substituições de caracteres
+
+print(textdistance.damerau_levenshtein('Python', 'Python'))  # Distância entre strings igais é 0
+print(textdistance.damerau_levenshtein('Python', 'Pithon'))  # Um caractere diferente
+print(textdistance.damerau_levenshtein('Python', 'Pytho'))   # Um caractere faltante
+print(textdistance.damerau_levenshtein('Python', 'Ptyhon'))  # Dois caracteres diferentes, mas basta transpor
+print(textdistance.damerau_levenshtein('Python', 'abc'))     # Todos diferentes
+print(textdistance.damerau_levenshtein('Python', 'ython'))   # Todos diferentes, mas basta inserir 1
+```
+> 0  
+> 1  
+> 1  
+> 1  
+> 6  
+> 1
+
+```python
+import prettytable
+
+tabela = prettytable.PrettyTable()
+tabela.field_names = ['String', 'Hamming', 'Levenshtein',
+                      'Damerau-Levenshtein', 'Jaro–Winkler (s)',
+                      'Strcmp95 (s)']
+
+lista = ['Python', 'Pytho', 'Pithon', 'Piton', 'Paithon', 'Paiton', 'Pthon',
+         'Qython', 'nohtyP', 'yPhtno']
+criterios = [textdistance.hamming, textdistance.levenshtein,
+             textdistance.damerau_levenshtein, textdistance.jaro,
+             textdistance.strcmp95]
+
+for palavra in lista:
+    distancias = []
+    for criterio in criterios:
+        distancias.append(criterio('Python', palavra))
+
+    tabela.add_row([palavra] + distancias)
+
+tabela.align["String"] = 'l'
+
+print(tabela)
+```
+> +---------+---------+-------------+---------------------+---------------------+---------------------+
+> | String  | Hamming | Levenshtein | Damerau-Levenshtein |   Jaro–Winkler (s)  |     Strcmp95 (s)    |
+> +---------+---------+-------------+---------------------+---------------------+---------------------+
+> | Python  |    0    |      0      |          0          |          1          |          1          |
+> | Pytho   |    1    |      1      |          1          |  0.9444444444444445 |  0.9666666666666667 |
+> | Pithon  |    1    |      1      |          1          |  0.888888888888889  |  0.9299999999999999 |
+> | Piton   |    4    |      2      |          2          |  0.8222222222222223 |        0.873        |
+> | Paithon |    6    |      2      |          2          |  0.8492063492063492 |  0.8921428571428571 |
+> | Paiton  |    3    |      3      |          3          |  0.7777777777777777 |  0.8300000000000001 |
+> | Pthon   |    5    |      1      |          1          |  0.9444444444444445 |  0.9500000000000001 |
+> | Qython  |    1    |      1      |          1          |  0.888888888888889  |  0.888888888888889  |
+> | nohtyP  |    6    |      6      |          5          | 0.38888888888888884 | 0.38888888888888884 |
+> | yPhtno  |    6    |      4      |          3          |  0.8333333333333334 |  0.8333333333333334 |
+> +---------+---------+-------------+---------------------+---------------------+---------------------+
 
 ```python
 
