@@ -1354,31 +1354,235 @@ print(tabela)
 > +---------+---------+-------------+---------------------+---------------------+---------------------+
 
 ```python
+# Comparações fonéticas (em inglês)
+tabela = prettytable.PrettyTable()
+tabela.field_names = ['String', 'Damerau-Levenshtein', 'Editex', 'MRA (s)']
 
+lista = ['Helena', 'Helen', 'Elena', 'Hellen', 'Yelena', 'Yellow', 'eHelan']
+criterios = [textdistance.damerau_levenshtein, textdistance.editex,
+             textdistance.mra]
+
+for palavra in lista:
+    distancias = []
+    for criterio in criterios:
+        distancias.append(criterio('Helena', palavra))
+
+    tabela.add_row([palavra] + distancias)
+
+tabela.align["String"] = 'l'
+
+print(tabela)
 ```
->
+> +--------+---------------------+--------+---------+  
+> | String | Damerau-Levenshtein | Editex | MRA (s) |  
+> +--------+---------------------+--------+---------+  
+> | Helena |          0          |   0    |    3    |  
+> | Helen  |          1          |   2    |    3    |  
+> | Elena  |          2          |   2    |    2    |  
+> | Hellen |          2          |   2    |    3    |  
+> | Yelena |          1          |   2    |    2    |  
+> | Yellow |          4          |   7    |    1    |  
+> | eHelan |          3          |   5    |    0    |  
+> +--------+---------------------+--------+---------+
 
 ```python
+lista = ['Elliana', 'Elianna', 'Aliana', 'Alianna', 'Ellianna', 'Elyana',
+ 'Eliyanah', 'Alyanna', 'Aliyana', 'Alyana', 'Eleana', 'Ellyana', 'Aliyanna']
 
+criterios = [textdistance.damerau_levenshtein, textdistance.editex]
+nome_criterios = ['Damerau Levenshtein', 'Editex']
+
+print('{} / {}'.format(*nome_criterios))
+
+tabela = prettytable.PrettyTable()
+tabela.field_names = ['nome'] + lista
+for i in range(len(lista)):
+    row = [lista[i]]
+    for j in range(len(lista)):
+        d0 = criterios[0](lista[i], lista[j])
+        d1 = criterios[1](lista[i], lista[j])
+        row.append('{} / {}'.format(d0, d1) if i<=j else '')
+    tabela.add_row(row)
+print(tabela)
 ```
->
+> Damerau Levenshtein / Editex  
+> +----------+---------+---------+--------+---------+----------+--------+----------+---------+---------+--------+--------+---------+----------+  
+> |   nome   | Elliana | Elianna | Aliana | Alianna | Ellianna | Elyana | Eliyanah | Alyanna | Aliyana | Alyana | Eleana | Ellyana | Aliyanna |  
+> +----------+---------+---------+--------+---------+----------+--------+----------+---------+---------+--------+--------+---------+----------+  
+> | Elliana  |  0 / 0  |  2 / 0  | 2 / 1  |  3 / 1  |  1 / 0   | 2 / 1  |  3 / 3   |  4 / 2  |  3 / 2  | 3 / 2  | 2 / 1  |  1 / 1  |  4 / 2   |  
+> | Elianna  |         |  0 / 0  | 2 / 1  |  1 / 1  |  1 / 0   | 2 / 1  |  3 / 3   |  2 / 2  |  3 / 2  | 3 / 2  | 2 / 1  |  3 / 1  |  2 / 2   |  
+> |  Aliana  |         |         | 0 / 0  |  1 / 0  |  3 / 1   | 2 / 2  |  3 / 4   |  2 / 1  |  1 / 1  | 1 / 1  | 2 / 2  |  3 / 2  |  2 / 1   |  
+> | Alianna  |         |         |        |  0 / 0  |  2 / 1   | 3 / 2  |  4 / 4   |  1 / 1  |  2 / 1  | 2 / 1  | 3 / 2  |  4 / 2  |  1 / 1   |  
+> | Ellianna |         |         |        |         |  0 / 0   | 3 / 1  |  4 / 3   |  3 / 2  |  4 / 2  | 4 / 2  | 3 / 1  |  2 / 1  |  3 / 2   |  
+> |  Elyana  |         |         |        |         |          | 0 / 0  |  2 / 4   |  2 / 1  |  2 / 3  | 1 / 1  | 1 / 1  |  1 / 0  |  3 / 3   |  
+> | Eliyanah |         |         |        |         |          |        |  0 / 0   |  4 / 5  |  2 / 3  | 3 / 5  | 3 / 4  |  2 / 4  |  3 / 3   |  
+> | Alyanna  |         |         |        |         |          |        |          |  0 / 0  |  2 / 2  | 1 / 0  | 3 / 2  |  3 / 1  |  1 / 2   |  
+> | Aliyana  |         |         |        |         |          |        |          |         |  0 / 0  | 1 / 2  | 3 / 3  |  2 / 3  |  1 / 0   |  
+> |  Alyana  |         |         |        |         |          |        |          |         |         | 0 / 0  | 2 / 2  |  2 / 1  |  2 / 2   |  
+> |  Eleana  |         |         |        |         |          |        |          |         |         |        | 0 / 0  |  2 / 1  |  4 / 3   |  
+> | Ellyana  |         |         |        |         |          |        |          |         |         |        |        |  0 / 0  |  3 / 3   |  
+> | Aliyanna |         |         |        |         |          |        |          |         |         |        |        |         |  0 / 0   |  
+> +----------+---------+---------+--------+---------+----------+--------+----------+---------+---------+--------+--------+---------+----------+
 
 ```python
+lista = ['Tiago', 'Thiago', 'Tyago', 'Thyago', 'Tiagho', 'Thiagho',
+         'Tyagho', 'Thyagho']
 
+criterios = [textdistance.damerau_levenshtein, textdistance.editex]
+nome_criterios = ['Damerau Levenshtein', 'Editex']
+print('Como funciona em português?')
+print('{} / {}'.format(*nome_criterios))
+
+tabela = prettytable.PrettyTable()
+tabela.field_names = ['nome'] + lista
+for i in range(len(lista)):
+    row = [lista[i]]
+    for j in range(len(lista)):
+        d0 = criterios[0](lista[i], lista[j])
+        d1 = criterios[1](lista[i], lista[j])
+        row.append('{} / {}'.format(d0, d1) if i<=j else '')
+    tabela.add_row(row)
+print(tabela)
 ```
->
+> Como funciona em português?  
+> Damerau Levenshtein / Editex  
+> +---------+-------+--------+-------+--------+--------+---------+--------+---------+  
+> |   nome  | Tiago | Thiago | Tyago | Thyago | Tiagho | Thiagho | Tyagho | Thyagho |  
+> +---------+-------+--------+-------+--------+--------+---------+--------+---------+  
+> |  Tiago  | 0 / 0 | 1 / 2  | 1 / 1 | 2 / 3  | 1 / 2  |  2 / 4  | 2 / 3  |  3 / 5  |  
+> |  Thiago |       | 0 / 0  | 2 / 3 | 1 / 1  | 2 / 4  |  1 / 2  | 3 / 5  |  2 / 3  |  
+> |  Tyago  |       |        | 0 / 0 | 1 / 2  | 2 / 3  |  3 / 5  | 1 / 2  |  2 / 4  |  
+> |  Thyago |       |        |       | 0 / 0  | 3 / 5  |  2 / 3  | 2 / 4  |  1 / 2  |  
+> |  Tiagho |       |        |       |        | 0 / 0  |  1 / 2  | 1 / 1  |  2 / 3  |  
+> | Thiagho |       |        |       |        |        |  0 / 0  | 2 / 3  |  1 / 1  |  
+> |  Tyagho |       |        |       |        |        |         | 0 / 0  |  1 / 2  |  
+> | Thyagho |       |        |       |        |        |         |        |  0 / 0  |  
+> +---------+-------+--------+-------+--------+--------+---------+--------+---------+
+
+
+
+# Aplicação
+* Recuperando dados de páginas web
 
 ```python
+import urllib
 
+url = 'http://ti.saude.rs.gov.br/covid19/'
+with urllib.request.urlopen(url) as f:
+    conteudo = f.read()
+# print(conteudo)
 ```
->
 
 ```python
+import ast  # (Abstract Syntax Trees) https://docs.python.org/3/library/ast.html
 
+# Busca posição de variável JavaScript
+inicio = conteudo.find(b'<script>')
+inicio = conteudo.find(b'=', inicio) + 1
+fim = conteudo.find(b']') + 1
+
+variavel = conteudo[inicio:fim].replace(b'lat', b'"lat"').replace(b'lng', b'"lng"')
+
+# Analisa a variável e cria uma variável python com o mesmo conteúdo
+cidades = ast.literal_eval(variavel.decode().lstrip())
+
+# Mostra estrutura obtida
+for i, cidade in enumerate(cidades):
+    print(i, cidade)
+    if i==5:
+        break
+
+# Converte entradas em string para inteiro
+for i in range(len(cidades)):
+    cidades[i]['total'] = int(cidades[i]['total'])
+    cidades[i]['cv'] = int(cidades[i]['cv']) # Incidência por 100.000?
+    cidades[i]['populacao'] = int(cidades[i]['populacao'].replace('.', ''))
+
+print()
+
+# Mostra como ficou
+for i, cidade in enumerate(cidades):
+    print(i, cidade)
+    if i==5:
+        break
 ```
->
 
 ```python
+# Ordena a lista de cidades conforme chave dada
+cidades.sort(key = lambda x: x['total']/x['populacao'], reverse=True )  # Tente outras chaves
 
+for i, cidade in enumerate(cidades):
+    print(i, cidade)
+    if i==5:
+        break
 ```
->
+
+```python
+# Agora vamos olhar para evolução do número total de casos
+
+from datetime import datetime as dt
+
+# Busca posição de variável JavaScript
+inicio = conteudo.find(b'("GraphTotalCasos")')
+inicio = conteudo.find(b'[', inicio)
+fim = conteudo.find(b']', inicio) + 1
+
+variavel = conteudo[inicio:fim]
+
+datas = ast.literal_eval(variavel.decode().lstrip()) # Recupera as datas
+
+
+# Vamos procurar o número de casos
+inicio = conteudo.find(b'data:', fim)+5
+inicio = conteudo.find(b'[', inicio)
+fim = conteudo.find(b']', inicio) + 1
+
+variavel = conteudo[inicio:fim]
+
+# Analisa a variável e cria uma variável python com o mesmo conteúdo
+numero_de_casos = ast.literal_eval(variavel.decode().lstrip())
+
+for i in range(len(datas)):
+    datas[i] =  dt.strptime(datas[i]+'/20', '%d/%m/%y')
+
+print(datas)
+print(numero_de_casos)
+```
+
+```python
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+
+fig, ax = plt.subplots()
+
+ax.plot(datas, numero_de_casos)
+
+# Ajusta ticks a 45 graus
+plt.xticks(rotation=45)
+ax.xaxis.set_major_locator(ticker.AutoLocator())
+
+# Adiciona rótulo aos eixos
+plt.ylabel("Número de casos", fontsize=14)
+
+# Adiciona grade
+ax.grid(True)
+
+# Escala logaritmica
+# ax.set_yscale('log')
+
+# Título
+fig.suptitle('Evolução número total de casos.')
+fig.patch.set_facecolor('white')
+fig.set_size_inches(10, 4)
+```
+
+```python
+x = ['Fabio', 'Caio']
+
+j = 0
+for i, nome in enumerate(x):
+    print(i, nome)
+    j += 1
+```
+> 0 Fabio  
+> 1 Caio
