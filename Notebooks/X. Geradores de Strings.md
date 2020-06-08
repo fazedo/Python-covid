@@ -1061,9 +1061,9 @@ print(f'{x:.3f}')
 print(f'{x:.3f}'.replace('.', ','))
 print(f"{   f'{x:.3f}'.replace('.', ',')   } é a representação de {x} com vírgulas." )
 ```
-> 2.200
-2,200
-2,200 é a representação de 2.2 com vírgulas.
+> 2.200  
+> 2,200  
+> 2,200 é a representação de 2.2 com vírgulas.
 
 ```python
 # Obs f-strings produzem strings normais. Não se trata de produzir

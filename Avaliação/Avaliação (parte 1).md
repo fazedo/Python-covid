@@ -17,7 +17,7 @@ Você pode submeter múltiplas vezes as respostas se desejar.
 
 
 ## Questão 1
-### Sobre inteiros no Python, é correto dizer:
+**Sobre inteiros no Python, é correto dizer:**
 - [ ] São limitados entre -9223372036854775808 e 9223372036854775807.
 - [ ] São potencialmente ilimitados e podem representar números tão grandes como
 necessários.
@@ -27,7 +27,7 @@ necessários.
 
 
 ## Questão 2
-### As variáveis da classe float.
+**As variáveis da classe float:**
 - [ ] Estão limitados em tamanho e precisão. Aproximadamente 16 casas decimais.
 - [ ] São potencialmente ilimitados e podem representar números tão grandes como
 necessários.
@@ -46,7 +46,7 @@ for x in range(10):
 
 
 ## Questão 3
-### Este código é equivalente a:
+**Este código é equivalente a:**
 - [ ] lista = [2*x + 1 for x in range(10)]
 - [ ] lista = (2*x + 1 for x in range(10))
 - [ ] lista = {2*(x +1) for x in range(10)]
@@ -56,17 +56,16 @@ for x in range(10):
 
 
 ## Questão 4
-### Se A é uma lista, é correto afirmar sobre a expressão len(A)==len({*A}):
+**Se ``A`` é uma lista, é correto afirmar sobre a expressão ``len(A)==len({*A})``:**
 - [ ] É sempre verdadeira.
 - [ ] É sempre falsa.
-- [ ] Não é possível prever o comportamento da expressão pois envolve objetos
-- [ ] incompatíveis.
+- [ ] Não é possível prever o comportamento da expressão pois envolve objetos incompatíveis.
 - [ ] É verdadeira quando a lista A é formada apenas por elementos distintos entre si.
 
 
 
 ## Questão 5
-### Se S é uma string, o código S[4]='F' é inválido mesmo que o comprimento da string seja superior a 4. Como você contornaria essa limitação?
+**Se S é uma string, o código ``S[4]='F'`` é inválido mesmo que o comprimento da string seja superior a ``4``. Como você contornaria essa limitação?**
 - [ ] S = S[:4] + 'F' + S[5:]
 - [ ] S = S[:3] + 'F' + S[5:]
 - [ ] S = S[:4] + 'F' + S[4:]
@@ -75,7 +74,7 @@ for x in range(10):
 
 
 ## Questão 6
-### O código "f = lambda x: x**2 + 1":
+**O código** ``f = lambda x: x**2 + 1``**:**
 - [ ] Define um float quando x é um inteiro.
 - [ ] Define uma tupla de dois elemento.
 - [ ] Define uma função.
@@ -84,7 +83,7 @@ for x in range(10):
 
 
 ## Questão 7
-### Sobre o código A['r'] = 23
+**Sobre o código ``A['r'] = 23``:**
 - [ ] É inválido.
 - [ ] É válido quando A é uma lista e a entrada 'r' estiver definida.
 - [ ] É válido quando A é um dicionário, mas apenas se entrada 'r' estiver definida.
@@ -102,7 +101,7 @@ else:
 
 
 ## Questão 8
-### Este código é equivalente a
+**Este código é equivalente a:**
 - [ ] y = 4 if x == 2 else 6
 - [ ] y = 6 if x == 2 else 4
 - [ ] x = 4 if y == 2 else 6
@@ -111,7 +110,7 @@ else:
 
 
 ## Questão 9
-### A string "compreensão" codificada em utf-8 é dada por:
+**A string ``compreensão`` codificada em utf-8 é dada por:**
 - [ ] b'compreens\xc3\xa3o''
 - [ ] b'compreens\xc3'
 - [ ] b'compreens\xa3o\xc3'
@@ -120,7 +119,7 @@ else:
 
 
 ## Questão 10
-### A condição de permanência de um laço while é x<0.7 e o bloco de repetição é x = 0.2*np.cos(x) + 0.8*x. A variável x vale 0 antes do laço. Assinale a alternativa com o valor de x ao final do laço:
+**A condição de permanência de um laço while é ``x<0.7`` e o bloco de repetição é ``x = 0.2*np.cos(x) + 0.8*x``. A variável ``x`` vale ``0`` antes do laço. Assinale a alternativa com o valor de ``x`` ao final do laço:**
 - [ ] x = 0.7
 - [ ] x = 0.7013170947599823
 - [ ] x = 0.7138522814858099

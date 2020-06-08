@@ -9,7 +9,7 @@
 [Aulas - Fabio Souto De Azevedo](https://mconf.ufrgs.br/webconf/00094149 )  
 [Gravações](http://www.mat.ufrgs.br/~mat01168/Python/grava.html)
 
-[Colabory](https://colab.research.google.com/notebooks/intro.ipynb)
+Plataforma de estudos: [Google Colabory](https://colab.research.google.com/notebooks/intro.ipynb)
 
 
 
@@ -151,68 +151,57 @@
 
 
 
----
-
 ## Aula 11
 **Data:** 13/05/2020
 
-https://colab.research.google.com/drive/1rJLAGSdSLigNBFEJAWt0a6c2vJ4FKDdi?usp=sharing
+**Lista de exercícios:**
+- [Lista X](https://colab.research.google.com/drive/1rJLAGSdSLigNBFEJAWt0a6c2vJ4FKDdi?usp=sharing)
 
-https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf
+**Extras:**
+- [Imperial College](https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf)
 
 
----
 
 ## Aula 12
 **Data:** 18/05/2020
 
-[Geradores de Srings](https://colab.research.google.com/drive/16PUVWv7eBl1kT0B_SoyWq9ZlWVz51mI3)
+**Assuntos:**
+- [Geradores de Srings](https://colab.research.google.com/drive/16PUVWv7eBl1kT0B_SoyWq9ZlWVz51mI3)
 
 
-
----
 
 ## Aula 13
 **Data:** 20/05/2020
 
 
 
----
-
 ## Aula 14
 **Data:** 25/05/2020
 
 
-
----
 
 ## Aula 15
 **Data:** 27/05/2020
 
 
 
----
-
 ## Aula 16
 **Data:** 01/06/2020
 
 
-### Extras
-[Estatísticas](https://colab.research.google.com/drive/1ICDf5YdZqZHQ0tr1LtVAHWAQek8gqbp-)
+**Extras:**
+- [Estatísticas](https://colab.research.google.com/drive/1ICDf5YdZqZHQ0tr1LtVAHWAQek8gqbp-)
+
+**Lista de exercícios:**
+- [Lista números aleatórios e simulações](https://colab.research.google.com/drive/1xxssDw5I9QUSabcNOor1ClwZ37fR1urN?usp=sharing)
 
 
-Lista números aleatórios e simulações
+[Distribuições de prob. e regressão:](https://colab.research.google.com/drive/1ICDf5YdZqZHQ0tr1LtVAHWAQek8gqbp-?usp=sharing)
 
-https://colab.research.google.com/drive/1xxssDw5I9QUSabcNOor1ClwZ37fR1urN?usp=sharing
+[Lista X](https://colab.research.google.com/drive/1AMRGyfdb3MJ-ShEfwoDqDSp4JIF_Bc3c?usp=sharing)
 
-
-Distribuições de prob. e regressão:
-    https://colab.research.google.com/drive/1ICDf5YdZqZHQ0tr1LtVAHWAQek8gqbp-?usp=sharing
-
-Lista:    https://colab.research.google.com/drive/1AMRGyfdb3MJ-ShEfwoDqDSp4JIF_Bc3c?usp=sharing
-
----------------
+---
 
 [Pandas](https://colab.research.google.com/drive/1NZp_zzrInVBp-7hrayo42-xl2UgQ1XZl)
 
-[Lista](https://colab.research.google.com/drive/1fpd4CkaK2EC-mHfpypslykWArQzlbIQh#scrollTo=0Dj7pMfrAGgP)
+[Lista X](https://colab.research.google.com/drive/1fpd4CkaK2EC-mHfpypslykWArQzlbIQh#scrollTo=0Dj7pMfrAGgP)
