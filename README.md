@@ -27,11 +27,14 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 		- [Lista 4](https://colab.research.google.com/drive/1QaLOn0ALTyDf6zQqm_VQ2VW1VwJcooFt)
 - [Modelos Discretos](https://colab.research.google.com/drive/1SQrVc0ytcw7Xn4p4R596fMWcUJZ09air)
 	- **Aula 5**
+		- [Lista 5](https://colab.research.google.com/drive/1qRO9WFrcXalfWquxfunfmDlwtao6X-3r)
 - [Funções e While](https://colab.research.google.com/drive/1I8waNG5fCdkGccpMqxDfW_Rb-2MNyp5M)
 	- **Aula 6**
+		- [Lista 6 - Funções Definidas](https://colab.research.google.com/drive/1ibDKwTYpNIm00XfvXT_YTUloJN7jLorF)
 	- **Aula 7**
-- [Arquivos](https://colab.research.google.com/drive/1ZmeoDMnD0mUapSQ5tPrL6Jq4xcpBjMWb)
 	- **Aula 8**
+		- [Lista 7](https://colab.research.google.com/drive/1rL3fA-fW4wtv8zFED8JHYPmrlDXUU36F)
+- [Arquivos](https://colab.research.google.com/drive/1ZmeoDMnD0mUapSQ5tPrL6Jq4xcpBjMWb)
 	- Aula 9
 	- Aula 10
 	- Aula 11
@@ -114,6 +117,9 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 
 **Data:** 22/04/2020
 
+**Assuntos:**
+- [Modelos Discretos](https://colab.research.google.com/drive/1SQrVc0ytcw7Xn4p4R596fMWcUJZ09air)
+
 **Lista de exercícios:**
 - [Lista 5](https://colab.research.google.com/drive/1qRO9WFrcXalfWquxfunfmDlwtao6X-3r)
 
@@ -128,29 +134,40 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 
 **Data:** 27/04/2020
 
+**Assuntos:**
+- [Funções e While](https://colab.research.google.com/drive/1I8waNG5fCdkGccpMqxDfW_Rb-2MNyp5M)
+
 **Lista de exercícios:**
-- [Lista 6](https://colab.research.google.com/drive/1ibDKwTYpNIm00XfvXT_YTUloJN7jLorF)
+- [Lista 6 - Funções Definidas](https://colab.research.google.com/drive/1ibDKwTYpNIm00XfvXT_YTUloJN7jLorF)
 
 
 
 ## Aula 7
 **Data:** 29/04/2020
 
+**Assuntos:**
+- [Funções e While](https://colab.research.google.com/drive/1I8waNG5fCdkGccpMqxDfW_Rb-2MNyp5M)
+
 **Lista de exercícios:**
-- [Lista 7](https://colab.research.google.com/drive/1rL3fA-fW4wtv8zFED8JHYPmrlDXUU36F)
+- [Lista 7 - Lista, While, Dicionáris, etc](https://colab.research.google.com/drive/1rL3fA-fW4wtv8zFED8JHYPmrlDXUU36F)
 
 
 
 ## Aula 8
 **Data:** 04/05/2020
 
-**Lista de exercícios:**
-- [Lista 8](https://colab.research.google.com/drive/1w10gGADK11rdYJ4thNBPK2jem6jwnpqg)
+**Assuntos:**
+- [Funções e While](https://colab.research.google.com/drive/1I8waNG5fCdkGccpMqxDfW_Rb-2MNyp5M)
 
+**Lista de exercícios:**
+- [Lista 7 - Lista, While, Dicionáris, etc](https://colab.research.google.com/drive/1rL3fA-fW4wtv8zFED8JHYPmrlDXUU36F)
 
 
 ## Aula 9
 **Data:** 06/05/2020
+
+**Assuntos:**
+- [Arquivos](https://colab.research.google.com/drive/1ZmeoDMnD0mUapSQ5tPrL6Jq4xcpBjMWb#forceEdit=true&sandboxMode=true)
 
 **Lista de exercícios:**
 - [Lista 8](https://colab.research.google.com/drive/1w10gGADK11rdYJ4thNBPK2jem6jwnpqg)
