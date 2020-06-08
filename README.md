@@ -16,23 +16,33 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 ### Notebooks
 
 - [Primeiro Notebook](https://colab.research.google.com/drive/1yAVi2BRn0Rib60uRp5GvCbzaXWjHQg_h#scrollTo=bwoycVHhKOc6)  
-	- Aula 1
-	- Aula 2
-	- Aula 3
+	- **Aula 1**
+		- [Lista 1](https://colab.research.google.com/drive/1OQ1t2tOYLwpGjJ-5_vVcJ1Vl9ew2ntek)
+	- **Aula 2**
+		- [Lista 2](https://colab.research.google.com/drive/1KA-J7giatg3qfSFiv9LtUsLiDiw5lp8s)
+	- **Aula 3**
+		- [Lista 3](https://colab.research.google.com/drive/1iH1NvWC4VayE7Eg5ZyFiQmRRzjQxsm9E)
 - [Segundo Notebook](https://colab.research.google.com/drive/18Sju4vJdT8r5CNbr11yVHHKYFShT91c6)  
-	- Aula 4
+	- **Aula 4**
+		- [Lista 4](https://colab.research.google.com/drive/1QaLOn0ALTyDf6zQqm_VQ2VW1VwJcooFt)
 - [Modelos Discretos](https://colab.research.google.com/drive/1SQrVc0ytcw7Xn4p4R596fMWcUJZ09air)
-	- Aula 5
+	- **Aula 5**
 - [Funções e While](https://colab.research.google.com/drive/1I8waNG5fCdkGccpMqxDfW_Rb-2MNyp5M)
-	- Aula 6
-	- Aula 7
+	- **Aula 6**
+	- **Aula 7**
 - [Arquivos](https://colab.research.google.com/drive/1ZmeoDMnD0mUapSQ5tPrL6Jq4xcpBjMWb)
-	- Aula 8
+	- **Aula 8**
+	- Aula 9
+	- Aula 10
+	- Aula 11
 - [Geradores de Srings](https://colab.research.google.com/drive/16PUVWv7eBl1kT0B_SoyWq9ZlWVz51mI3)
-	- Aula 12
+	- **Aula 12**
+	- Aula 13
+	- Aula 14
+	- Aula 15
 - [Estatísticas](https://colab.research.google.com/drive/1ICDf5YdZqZHQ0tr1LtVAHWAQek8gqbp-)
 - [Pandas](https://colab.research.google.com/drive/1NZp_zzrInVBp-7hrayo42-xl2UgQ1XZl)
-	- Aula 16
+	- **Aula 16**
 
 
 
@@ -45,7 +55,7 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 **Data:** 08/04/2020  
 
 **Assuntos:**
-- primeiro notebook
+- [Primeiro Notebook](https://colab.research.google.com/drive/1yAVi2BRn0Rib60uRp5GvCbzaXWjHQg_h#scrollTo=bwoycVHhKOc6)  
 
 **Lista de exercícios:**
 - [Lista 1](https://colab.research.google.com/drive/1OQ1t2tOYLwpGjJ-5_vVcJ1Vl9ew2ntek)
@@ -55,6 +65,9 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 ## Aula 2
 
 **Data:** 13/04/2020
+
+**Assuntos:**
+- [Primeiro Notebook](https://colab.research.google.com/drive/1yAVi2BRn0Rib60uRp5GvCbzaXWjHQg_h#scrollTo=bwoycVHhKOc6)  
 
 **Lista de exercícios:**
 - [Lista 2](https://colab.research.google.com/drive/1KA-J7giatg3qfSFiv9LtUsLiDiw5lp8s)
@@ -66,6 +79,9 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 
 ## Aula 3
 **Data:** 15/04/2020
+
+**Assuntos:**
+- [Primeiro Notebook](https://colab.research.google.com/drive/1yAVi2BRn0Rib60uRp5GvCbzaXWjHQg_h#scrollTo=bwoycVHhKOc6)  
 
 **Lista de exercícios:**
 - [Lista 3](https://colab.research.google.com/drive/1iH1NvWC4VayE7Eg5ZyFiQmRRzjQxsm9E)
@@ -82,6 +98,9 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 ## Aula 4
 
 **Data:** 20/04/2020
+
+**Assuntos:**
+- [Segundo Notebook](https://colab.research.google.com/drive/18Sju4vJdT8r5CNbr11yVHHKYFShT91c6)
 
 **Lista de exercícios:**
 - [Lista 4](https://colab.research.google.com/drive/1QaLOn0ALTyDf6zQqm_VQ2VW1VwJcooFt)
