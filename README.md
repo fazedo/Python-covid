@@ -1,5 +1,18 @@
 # Grupo de Estudos - Python Covid-19
 
+Grupo de estudo para computação científica em Python.
+
+
+## Sobre
+
+### Objetivo
+Realizar atividades usando a linguagem de programação Python ao longo do período de paralisação de aulas. Trabalharemos aspectos básicos sobre a linguagem Python (versão 3.6). Nosso estudo de caso será a evolução da pandemia COVID-19.
+
+### Conteúdo
+Importação de dados disponíveis publicamente, visualização em gráficos, levantamento de parâmetros via ajuste de curvas e simulação de um modelo evolutivo.
+
+### Metodologia
+Usaremos a plataforma Google Colab, plataforma que permite ao usuário rodar código Python 3.6.9 remotamente, dispensando a instalação em seu computador pessoal de interpretadores e módulos. Os escontros serão realizados à distância através de encontros virtuais via Skype.
 
 
 ## Informações Importantes
@@ -35,11 +48,16 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 	- **Aula 8**
 		- [Lista 7](https://colab.research.google.com/drive/1rL3fA-fW4wtv8zFED8JHYPmrlDXUU36F)
 - [Arquivos](https://colab.research.google.com/drive/1ZmeoDMnD0mUapSQ5tPrL6Jq4xcpBjMWb)
-	- Aula 9
-	- Aula 10
+	- **Aula 9**
+		- [Lista 8](https://colab.research.google.com/drive/1w10gGADK11rdYJ4thNBPK2jem6jwnpqg)
+- [Modelos Contínuos](https://colab.research.google.com/drive/1MTC1GSOP_DLPYZusqohP9DcaWr_ab-UX)
+	- **Aula 10**
+		- [Lista 9](https://colab.research.google.com/drive/1jHVZpLxn8ReTPZvZSz_z8sD2vy1NJsQl)
+- [Comparações entre países](https://colab.research.google.com/drive/1uWr272h_MlUeUlgfm9ky8npfjj9hx32H#scrollTo=2o5aBkQNBjEY)
 	- Aula 11
 - [Geradores de Srings](https://colab.research.google.com/drive/16PUVWv7eBl1kT0B_SoyWq9ZlWVz51mI3)
 	- **Aula 12**
+		- [Lista 10](https://colab.research.google.com/drive/1JMBUiyKBbjHHzqhdAFuri5EO_79l045q?usp=sharing)
 	- Aula 13
 	- Aula 14
 	- Aula 15
@@ -171,14 +189,17 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 
 **Lista de exercícios:**
 - [Lista 8](https://colab.research.google.com/drive/1w10gGADK11rdYJ4thNBPK2jem6jwnpqg)
-
-
+- [Lista 8 - Respostas](https://colab.research.google.com/drive/1rJLAGSdSLigNBFEJAWt0a6c2vJ4FKDdi?usp=sharing)
+---
 
 ## Aula 10
 **Data:** 11/05/2020
 
 **Assuntos:**
-- [Comparações entre países](https://colab.research.google.com/drive/1uWr272h_MlUeUlgfm9ky8npfjj9hx32H#scrollTo=2o5aBkQNBjEY)
+- [Modelos Contínuos](https://colab.research.google.com/drive/1MTC1GSOP_DLPYZusqohP9DcaWr_ab-UX)
+
+**Lista de exercícios:**
+- [Lista 9](https://colab.research.google.com/drive/1jHVZpLxn8ReTPZvZSz_z8sD2vy1NJsQl)
 
 **Extras:**
 - UFRGS: [Cálculo Numérico](https://www.ufrgs.br/reamat/CalculoNumerico/livro-py/main.html)  
@@ -190,8 +211,8 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 ## Aula 11
 **Data:** 13/05/2020
 
-**Lista de exercícios:**
-- [Lista X](https://colab.research.google.com/drive/1rJLAGSdSLigNBFEJAWt0a6c2vJ4FKDdi?usp=sharing)
+**Assuntos:**
+- [Comparações entre países](https://colab.research.google.com/drive/1uWr272h_MlUeUlgfm9ky8npfjj9hx32H#scrollTo=2o5aBkQNBjEY)
 
 **Extras:**
 - [Imperial College](https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf)
@@ -204,11 +225,17 @@ Plataforma de estudos: [Google Colabory](https://colab.research.google.com/noteb
 **Assuntos:**
 - [Geradores de Srings](https://colab.research.google.com/drive/16PUVWv7eBl1kT0B_SoyWq9ZlWVz51mI3)
 
+**Lista de exercícios:**
+- [Lista 10](https://colab.research.google.com/drive/1JMBUiyKBbjHHzqhdAFuri5EO_79l045q?usp=sharing)
+
 
 
 ## Aula 13
 **Data:** 20/05/2020
 
+**Assuntos:**
+- [Geradores de Srings](https://colab.research.google.com/drive/16PUVWv7eBl1kT0B_SoyWq9ZlWVz51mI3)
+- [Operadores Lógicos](https://colab.research.google.com/drive/1WoMEVw37wgPujY2Ciu2WS3d0d6kKRK-j#scrollTo=p7H2sy74A6pv)
 
 
 ## Aula 14

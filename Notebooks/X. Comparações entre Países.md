@@ -1,4 +1,5 @@
 # Comparações entre países
+
 * Traça gráfico compararativo entre países.
 * A variável min_casos na terceira célula determina o ponto inicial a ser traçado.
 * Cada pais atingiu este limite em datas diferentes, logo a escala em x é relativa.
