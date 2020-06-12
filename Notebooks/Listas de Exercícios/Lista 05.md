@@ -18,5 +18,33 @@ tamanho_inicial_da_populacao = 100
 tamanho_inicial_dos_recursos = 10_000
 constante = 0.08/(tamanho_inicial_dos_recursos - tamanho_inicial_da_populacao)  # 8% ao dia no primeiro dia
 a = 0.01
+
+N = np.zeros(dias_a_simular)
+R = np.zeros(dias_a_simular)
+
+N[0] = tamanho_inicial_da_populacao
+R[0] = tamanho_inicial_dos_recursos
+
+constante = 0.08/(R[0] - N[0])  # 8% ao dia no primeiro dia
+a = 0.01
+
+for k in range(dias_a_simular-1):
+    N[k+1] =  N[k] * (1 + constante*(R[k] - N[k]))  
+    R[k+1] = R[k] - a*N[k]
+
+
+fig, ax = plt.subplots(1, 1)
+
+ax.plot(N[:k+2])
+ax.plot(R[:k+2])
+
+ax.legend(['População', 'Recursos'])
+
+
+ax.grid(True)
+# ax.set_yscale('log') # Escala log?
+fig.patch.set_facecolor('white')
+
+plt.show()
 ```
->
+> ![Gráfico 05-01](Gráficos/Gráfico05-01.png)
