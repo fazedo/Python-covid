@@ -15,9 +15,9 @@ Importação de dados disponíveis publicamente, visualização em gráficos, le
 Usaremos a plataforma Google Colab, plataforma que permite ao usuário rodar código Python 3.6.9 remotamente, dispensando a instalação em seu computador pessoal de interpretadores e módulos. Os escontros serão realizados à distância através de encontros virtuais via Skype.
 
 
-## Informações Importantes
+### Informações Importantes
 
-[Comunidade - Computação Científica](https://mconf.ufrgs.br/spaces/computacao-cientifica)
+Mconf: [Comunidade - Computação Científica](https://mconf.ufrgs.br/spaces/computacao-cientifica)
 
 [Aulas - Fabio Souto De Azevedo](https://mconf.ufrgs.br/webconf/00094149 )  
 [Gravações](http://www.mat.ufrgs.br/~mat01168/Python/grava.html)
@@ -26,7 +26,7 @@ Plataforma de estudos: [Google Colaboratory](https://colab.research.google.com/n
 
 
 
-### Notebooks
+## Notebooks
 
 - Primeiro Notebook | [GitHub](Notebooks/1.%20Primeiro%20Notebook.md) | [Google Colaboratory](https://colab.research.google.com/drive/1yAVi2BRn0Rib60uRp5GvCbzaXWjHQg_h)
 	- **[Aula 1](#aula-1)**
